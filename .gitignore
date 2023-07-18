@@ -1,0 +1,15 @@
+# Ignore node_modules and .next directories
+node_modules/
+.next/
+
+# Other specific files or directories to ignore (replace with your own)
+file_to_ignore.txt
+directory_to_ignore/
+
+# Ignore OS and editor files (optional, customize as needed)
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.vscode/
+.idea/
