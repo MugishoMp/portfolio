@@ -18,15 +18,15 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const mugishoLegoIcon = `/images/logo/logo_200.png`
+    const mugishoLegoIcon = `/images/logo/logo_500.png`
 
     return (
         <Link href="/">
                 <LogoBox> 
                     <Image 
                         src={mugishoLegoIcon} 
-                        width={20} 
-                        height={20} 
+                        width={30} 
+                        height={30} 
                         alt="logo" 
                     />
                     <Text
