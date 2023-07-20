@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import fontConfig from '../config/fontConfig'; // Import the fontConfig
 
 const LogoBox = styled.span`
     font-weight:bold;
@@ -18,7 +19,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const mugishoLegoIcon = `/images/logo/logo_500.png`
+    const mugishoLegoIcon = `/images/logo/mugisho_lego_star_wars_icon_small.png`
 
     return (
         <Link href="/">
@@ -34,7 +35,7 @@ const Logo = () => {
                                 'gray.800', 
                                 'whiteAlpha.900'
                                )}
-                        fontFamily='M PLUS Rounded 1c'
+                        fontFamily= {fontConfig.fontFamily}
                         fontWeight="bold"
                         ml={3}
                     >
