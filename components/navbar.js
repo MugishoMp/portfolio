@@ -1,4 +1,4 @@
-import Logo from './logo'
+import React, { useContext } from 'react';
 import NextLink from 'next/link'
 import {
     Container,
@@ -17,7 +17,16 @@ import {
 import { 
     HamburgerIcon,
 } from '@chakra-ui/icons'
+
+//logo
+import Logo from './logo'
+
+// for night mode
 import NightModeButton from './night-mode-button.js'
+
+// for the menu overlay
+import { MenuContext } from '../contexts/menuContext.js'; // Update the path
+import OverlayMenu from './overlayMenu.js';
 
 const LinkItem = ({href, path, children}) => {
     const active = path === href
@@ -37,6 +46,7 @@ const LinkItem = ({href, path, children}) => {
 
 const Navbar = props => {
     const { path } = props 
+    const { isMenuOpen, toggleMenu } = useContext(MenuContext);
 
     return (
         <Box
@@ -79,20 +89,14 @@ const Navbar = props => {
                 </Stack>
                 <Box flex={1} align="right">
                     <NightModeButton />
-                    <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
-                        <Menu> 
-                            <MenuButton 
-                                as={IconButton} 
-                                icon={<HamburgerIcon />} 
-                                variant="outline"
-                                aria-label="Options"
-                            />
-                            <MenuList>
-                                <MenuItem as={Link} href='/'>About</MenuItem>
-                                <MenuItem as={Link} href='/works'> Works</MenuItem>
-                                <MenuItem as={Link} href='posts'>Posts</MenuItem>
-                            </MenuList>
-                        </Menu>
+                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                        <IconButton
+                            icon={<HamburgerIcon />}
+                            variant="outline"
+                            aria-label="Options"
+                            onClick={toggleMenu}
+                        />
+                        <OverlayMenu isOpen={isMenuOpen} onClose={toggleMenu} />
                     </Box>
                 </Box>
             </Container>
