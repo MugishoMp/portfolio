@@ -12,8 +12,10 @@ const fontConfig = {
     xs: '12px',
     sm: '14px',
     md: '16px',
-    lg: '20px',
-    xl: '24px',
+    lg: '26px',
+    xl: '36px',
+    '2xl': '46px', // 2.8% of the smaller dimension of the viewport
+    '3xl': '56px', // 3.2% of the smaller dimension of the viewport
   },
 
   // Font weights

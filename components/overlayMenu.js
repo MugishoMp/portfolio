@@ -1,33 +1,38 @@
-import { Box, Link } from '@chakra-ui/react'
+import { Box, Link, Flex, Fade } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import fontConfig from '../config/fontConfig'
 
 const OverlayMenu = ({ isOpen, onClose }) => {
   return (
-    <Box
-      position="fixed"
-      top={0}
-      left={0}
-      width="100vw"
-      height="100vh"
-      bg="rgba(0, 0, 0, 0.6)"
-      display={isOpen ? 'block' : 'none'}
-      alignItems="center"
-      justifyContent="center"
-      zIndex={999}
-      onClick={onClose}
-    >
-      <Box p={4} bg="white" borderRadius="md">
-        <Link as={NextLink} href="/">
-          Home
-        </Link>
-        <Link as={NextLink} href="/works">
-          Works
-        </Link>
-        <Link as={NextLink} href="/posts">
-          Posts
-        </Link>
+    <Fade in={isOpen}>
+      <Box
+        position="fixed"
+        top={0}
+        left={0}
+        width="100vw"
+        height="100vh"
+        bg="rgba(0, 0, 0, 0.9)"
+        display={isOpen ? 'flex' : 'none'}
+        alignItems="center"
+        justifyContent="center"
+        zIndex={999}
+        onClick={onClose}
+      >
+        
+        <Flex p={4} flexDirection="column" textAlign="center">
+          <Link as={NextLink} href="/" fontSize={fontConfig.sizes['3xl']}>
+            Home
+          </Link>
+          <Link as={NextLink} href="/works" fontSize={fontConfig.sizes['3xl']}>
+            Works
+          </Link>
+          <Link as={NextLink} href="/posts" fontSize={fontConfig.sizes['3xl']}>
+            Posts
+          </Link>
+        </Flex>
       </Box>
-    </Box>
+    </Fade>
+    
   )
 }
 

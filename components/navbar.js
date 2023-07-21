@@ -26,7 +26,6 @@ import NightModeButton from './night-mode-button.js'
 
 // for the menu overlay
 import { MenuContext } from '../contexts/menuContext.js'; // Update the path
-import OverlayMenu from './overlayMenu.js';
 
 const LinkItem = ({href, path, children}) => {
     const active = path === href
@@ -46,7 +45,7 @@ const LinkItem = ({href, path, children}) => {
 
 const Navbar = props => {
     const { path } = props 
-    const { isMenuOpen, toggleMenu } = useContext(MenuContext);
+    const { toggleMenu } = useContext(MenuContext);
 
     return (
         <Box
@@ -99,7 +98,6 @@ const Navbar = props => {
                     </Box>
                 </Box>
             </Container>
-            <OverlayMenu isOpen={isMenuOpen} onClose={toggleMenu} />
         </Box>
    )
 }
