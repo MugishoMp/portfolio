@@ -96,10 +96,10 @@ const Navbar = props => {
                             aria-label="Options"
                             onClick={toggleMenu}
                         />
-                        <OverlayMenu isOpen={isMenuOpen} onClose={toggleMenu} />
                     </Box>
                 </Box>
             </Container>
+            <OverlayMenu isOpen={isMenuOpen} onClose={toggleMenu} />
         </Box>
    )
 }
