@@ -58,42 +58,65 @@ const Navbar = props => {
             {...props}
         >
             <Container 
-                display="flex" 
-                p={2} 
                 maxW="container.md" 
-                wrap="wrap" 
                 align="center" 
                 justify="space-between"
+                display="flex" 
+                p={0}
             > 
-                <Flex align="center" mr={5}>         
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-                            <Logo />
-                    </Heading>
-                </Flex>
-                <Stack
-                    direction={{base: 'colum', md: 'row'}}
-                    display={{base: 'none', md: 'flex'}}
-                    width={{base: 'full', md: 'auto'}}
-                    alignItems="center"
-                    flexGrow={ 1}
-                    mt={{base: 4, nmd: 0}}
+                <Box 
+                    p={2}
+                    display="flex" 
+                    wrap="wrap" 
                 >
-                    {/*children are any elements that reside within this item */}
-                    <LinkItem href="/works" path={path}>
-                        Works
-                    </LinkItem>
-                    <LinkItem href="/posts" path={path}>
-                        Posts
-                    </LinkItem>
-                </Stack>
-                <Box flex={1} align="right">
+                    <Flex align="center" mr={5}>         
+                        <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+                                <Logo />
+                        </Heading>
+                    </Flex>
+
+                    <Stack
+                        direction={{base: 'colum', md: 'row'}}
+                        display={{base: 'none', md: 'flex'}}
+                        width={{base: 'full', md: 'auto'}}
+                        alignItems="center"
+                        flexGrow={ 1}
+                        mt={{base: 4, nmd: 0}}
+                    >
+                        {/*children are any elements that reside within this item */}
+                        <LinkItem href="/works" path={path}>
+                            Works
+                        </LinkItem>
+                        <LinkItem href="/posts" path={path}>
+                            Posts
+                        </LinkItem>
+                    </Stack>
+                </Box>
+
+                <Box
+                    flex={1}
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="flex-end" // Align buttons to the right
+                >
                     <NightModeButton />
-                    <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+                    <Box
+                        ml={0}
+                        display={{ base: 'inline-block', md: 'none' }}
+                        height="100%" // Set height to 100% (of parent's height)
+                        css={{
+                        aspectRatio: '1/1', // Set the aspect ratio to 1:1 (square)
+                        }}
+                    >
                         <IconButton
-                            icon={<HamburgerIcon />}
-                            variant="outline"
-                            aria-label="Options"
-                            onClick={toggleMenu}
+                        icon={<HamburgerIcon />}
+                        variant="outline"
+                        aria-label="Options"
+                        onClick={toggleMenu}
+                        borderRadius={0}
+                        border="none" // Remove the border
+                        height="100%" // Set height to 100% (of parent's height)
+                        width="100%" // Set height to 100% (of parent's height)
                         />
                     </Box>
                 </Box>
