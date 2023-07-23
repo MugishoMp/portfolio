@@ -27,6 +27,7 @@ const MenuLink = ({ href, children }) => {
       as={NextLink}
       href={href}
       fontSize={fontConfig.sizes['3xl']}
+      fontFamily={fontConfig.fontFamily}
       color={isHovered ? hoverColor : linkColor}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
