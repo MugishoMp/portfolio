@@ -8,13 +8,13 @@ const fadeInAnimation = keyframes`
     opacity: 0;
   }
   to {
-    opacity: 0.9;
+    opacity: 1;
   }
 `;
 
 const fadeOutAnimation = keyframes`
   from {
-    opacity: 0.9;
+    opacity: 1;
   }
   to {
     opacity: 0;
@@ -22,20 +22,21 @@ const fadeOutAnimation = keyframes`
 `;
 
 const OverlayMenu = ({ isOpen, onClose }) => {
-  const [showMenu, setShowMenu] = useState(isOpen);
-
+  // is open is either true or false
+  // on close is a function that toggles the value of is open
+  const [showMenu, setShowMenu] = useState(false);
   useEffect(() => {
-    setShowMenu(isOpen);
-  }, [isOpen]);
+    if (isOpen) {
+      setShowMenu(isOpen)
+    }
+  }, [isOpen])
 
   const handleCloseMenu = () => {
-    // Start the fade-out animation
-    setShowMenu(false);
-
-    // Wait for the fade-out animation to complete before closing the menu
+    onClose();
+    // Add a delay before setting setShowMenu to false
     setTimeout(() => {
-      onClose();
-    }, 300); // Adjust the timeout value to match the duration of the fade-out animation
+      setShowMenu(false);
+    }, 200); // Adjust the delay value as needed
   };
 
   return (
@@ -53,7 +54,7 @@ const OverlayMenu = ({ isOpen, onClose }) => {
       onClick={handleCloseMenu} // Use the custom function to handle closing after fade-out animation
       pointerEvents={showMenu ? 'auto' : 'none'}
       css={{
-        animation: isOpen ? `${fadeInAnimation} 0.3s` : `${fadeOutAnimation} 0.3s`,
+        animation: isOpen ? `${fadeInAnimation} 0.2s` : `${fadeOutAnimation} 0.3s`,
       }}
     >
       <Flex p={4} flexDirection="column" textAlign="center">
