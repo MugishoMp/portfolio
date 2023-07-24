@@ -14,9 +14,6 @@ import {
     IconButton,
     useColorModeValue,  
 } from '@chakra-ui/react'
-import { 
-    HamburgerIcon,
-} from '@chakra-ui/icons'
 
 //logo
 import Logo from './logo'
@@ -26,10 +23,12 @@ import NightModeButton from './night-mode-button.js'
 
 // for the menu overlay
 import { MenuContext } from '../contexts/menuContext.js'; // Update the path
+import CustomMenuButton from './menu-button';
+import fontConfig from '../config/fontConfig';
 
 const LinkItem = ({href, path, children}) => {
     const active = path === href
-    const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900')
+    const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
     return (
         <Link 
             as={NextLink}
@@ -37,6 +36,7 @@ const LinkItem = ({href, path, children}) => {
             p={2}
             bg={active ? 'glassTeal' : undefined}
             color={active ? '#202023' : inactiveColor}
+            fontFamily={fontConfig.fontFamily}
         >
             {children}
         </Link>
@@ -100,25 +100,7 @@ const Navbar = props => {
                     justifyContent="flex-end" // Align buttons to the right
                 >
                     <NightModeButton />
-                    <Box
-                        ml={0}
-                        display={{ base: 'inline-block', md: 'none' }}
-                        height="100%" // Set height to 100% (of parent's height)
-                        css={{
-                        aspectRatio: '1/1', // Set the aspect ratio to 1:1 (square)
-                        }}
-                    >
-                        <IconButton
-                        icon={<HamburgerIcon />}
-                        variant="outline"
-                        aria-label="Options"
-                        onClick={toggleMenu}
-                        borderRadius={0}
-                        border="none" // Remove the border
-                        height="100%" // Set height to 100% (of parent's height)
-                        width="100%" // Set height to 100% (of parent's height)
-                        />
-                    </Box>
+                    <CustomMenuButton />
                 </Box>
             </Container>
         </Box>
