@@ -1,4 +1,3 @@
-
 const fontConfig = {
   // Font import link
   importLink: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap',

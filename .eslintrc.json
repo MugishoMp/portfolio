@@ -1,14 +1,39 @@
 {
     "root": true,
-    "extends": "next",
+    "extends": ["next", "airbnb"],
+    "parserOptions": {
+      "ecmaVersion": 2023,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
     "rules": {
-        "no-unused-vars": {
-            "error",
-            {
-                "argsIgnorePattern": "^_",
-                "varsIgnorePattern": "^_"
-            }
+      "no-console": "warn",
+      "no-unused-vars": ["error", {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }],
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+      "import/prefer-default-export": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "jsx-a11y/anchor-is-valid": ["error", {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".json"]
         }
+      }
     }
-}
-
+  }
+  

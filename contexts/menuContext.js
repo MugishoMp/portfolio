@@ -1,17 +1,19 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useMemo } from 'react';
 
 export const MenuContext = createContext();
 
-export const MenuProvider = ({ children }) => {
+export function MenuProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const contextValue = useMemo(() => ({ isMenuOpen, toggleMenu }), [isMenuOpen]);
+
   return (
-    <MenuContext.Provider value={{ isMenuOpen, toggleMenu }}>
+    <MenuContext.Provider value={contextValue}>
       {children}
     </MenuContext.Provider>
   );
-};
+}

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link, useColorModeValue, Box } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import fontConfig from '../config/fontConfig';
 import { keyframes } from '@emotion/react';
+import fontConfig from '../config/fontConfig';
 
 const blinkAnimation = keyframes`
   0% {
@@ -16,7 +16,7 @@ const blinkAnimation = keyframes`
   }
 `;
 
-const MenuLink = ({ href, children }) => {
+function MenuLink({ href, children }) {
   const linkColor = useColorModeValue('whiteAlpha.600', 'whiteAlpha.900');
   const hoverColor = useColorModeValue('whiteAlpha.900', 'whiteAlpha.600');
 
@@ -46,6 +46,6 @@ const MenuLink = ({ href, children }) => {
       {children}
     </Link>
   );
-};
+}
 
 export default MenuLink;
