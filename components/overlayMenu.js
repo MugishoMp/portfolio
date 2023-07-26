@@ -1,7 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import OverlayMenuLink from './overlayMenuLink.js';
-import { keyframes, css } from '@emotion/react';
+import { keyframes } from '@emotion/react';
+import OverlayMenuLink from './overlayMenuLink';
 
 const fadeInAnimation = keyframes`
   from {
@@ -21,15 +21,15 @@ const fadeOutAnimation = keyframes`
   }
 `;
 
-const OverlayMenu = ({ isOpen, onClose }) => {
+function OverlayMenu({ isOpen, onClose }) {
   // is open is either true or false
   // on close is a function that toggles the value of is open
   const [showMenu, setShowMenu] = useState(false);
   useEffect(() => {
     if (isOpen) {
-      setShowMenu(isOpen)
+      setShowMenu(isOpen);
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   const handleCloseMenu = () => {
     onClose();
@@ -51,10 +51,13 @@ const OverlayMenu = ({ isOpen, onClose }) => {
       alignItems="center"
       justifyContent="center"
       zIndex={999}
-      onClick={handleCloseMenu} // Use the custom function to handle closing after fade-out animation
+      // Use the custom function to handle closing after fade-out animation
+      onClick={handleCloseMenu}
       pointerEvents={showMenu ? 'auto' : 'none'}
       css={{
-        animation: isOpen ? `${fadeInAnimation} 0.2s` : `${fadeOutAnimation} 0.3s`,
+        animation: isOpen
+          ? `${fadeInAnimation} 0.2s`
+          : `${fadeOutAnimation} 0.3s`,
       }}
     >
       <Flex p={4} flexDirection="column" textAlign="center">
@@ -64,6 +67,6 @@ const OverlayMenu = ({ isOpen, onClose }) => {
       </Flex>
     </Box>
   );
-};
+}
 
 export default OverlayMenu;
