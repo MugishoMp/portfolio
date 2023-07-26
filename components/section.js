@@ -1,2 +1,2 @@
-import { motion } from 'framer-motion';
-import { chakra, shouldForwardProp } from '@chakra-ui/react';
+import { _motion } from 'framer-motion';
+import { _chakra, _shouldForwardProp } from '@chakra-ui/react';

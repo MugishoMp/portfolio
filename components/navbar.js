@@ -46,7 +46,9 @@ function Navbar(props) {
       bg={useColorModeValue('#ffffff40', '20202380')}
       style={{ backdropFilter: 'blur(10px' }}
       zIndex={1}
-      {...props}
+      // not entirely sure what removing this exactly does so for now im just
+      // going to comment this out
+      // {...props}
     >
       <Container
         maxW="container.md"
