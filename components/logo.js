@@ -5,17 +5,17 @@ import styled from '@emotion/styled';
 import fontConfig from '../config/fontConfig'; // Import the fontConfig
 
 const LogoBox = styled.span`
-    font-weight:bold;
-    font-size: 18x;
-    display: inline-flex;
-    align-items: center;
-    height: 30px;
-    line-height: 20px;
-    padding: 10px;
+  font-weight: bold;
+  font-size: 18x;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  line-height: 20px;
+  padding: 10px;
 
-    &:hover img{
-        transform: scale(1.1);
-    }
+  &:hover img {
+    transform: scale(1.1);
+  }
 `;
 
 function Logo() {
@@ -24,17 +24,9 @@ function Logo() {
   return (
     <Link href="/">
       <LogoBox>
-        <Image
-          src={mugishoLegoIcon}
-          width={30}
-          height={30}
-          alt="logo"
-        />
+        <Image src={mugishoLegoIcon} width={30} height={30} alt="logo" />
         <Text
-          color={useColorModeValue(
-            'gray.800',
-            'whiteAlpha.900',
-          )}
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily={fontConfig.fontFamily}
           fontWeight="bold"
           ml={3}

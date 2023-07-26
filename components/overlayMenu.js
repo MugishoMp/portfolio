@@ -55,7 +55,9 @@ function OverlayMenu({ isOpen, onClose }) {
       onClick={handleCloseMenu}
       pointerEvents={showMenu ? 'auto' : 'none'}
       css={{
-        animation: isOpen ? `${fadeInAnimation} 0.2s` : `${fadeOutAnimation} 0.3s`,
+        animation: isOpen
+          ? `${fadeInAnimation} 0.2s`
+          : `${fadeOutAnimation} 0.3s`,
       }}
     >
       <Flex p={4} flexDirection="column" textAlign="center">

@@ -57,11 +57,7 @@ function Navbar(props) {
         display="flex"
         p={0}
       >
-        <Box
-          p={2}
-          display="flex"
-          wrap="wrap"
-        >
+        <Box p={2} display="flex" wrap="wrap">
           <Flex align="center" mr={5}>
             <Heading as="h1" size="lg" letterSpacing="tighter">
               <Logo />

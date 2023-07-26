@@ -1,6 +1,7 @@
 const fontConfig = {
   // Font import link
-  importLink: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap',
+  importLink:
+    'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap',
 
   fontFamily: 'IBM Plex Mono', // Change this to the desired font name
 

@@ -1,11 +1,21 @@
 import {
-  Container, Box, Heading, Image, useColorModeValue,
+  Container,
+  Box,
+  Heading,
+  Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 function Page() {
   return (
     <Container>
-      <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mb={6} align="center">
+      <Box
+        borderRadius="lg"
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        p={3}
+        mb={6}
+        align="center"
+      >
         Hello, I am a Computer Science Student based in The Netherlands!
       </Box>
 
@@ -34,7 +44,6 @@ function Page() {
           />
         </Box>
       </Box>
-
     </Container>
   );
 }

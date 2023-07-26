@@ -16,7 +16,10 @@ function CustomMenuButton() {
         aspectRatio: '1/1', // Set the aspect ratio to 1:1 (square)
       }}
       _hover={{
-        bgColor: useColorModeValue('rgba(0, 0, 0, 0.1)', 'rgba(255, 255, 255, 0.1)'),
+        bgColor: useColorModeValue(
+          'rgba(0, 0, 0, 0.1)',
+          'rgba(255, 255, 255, 0.1)',
+        ),
       }}
     >
       <IconButton

@@ -36,10 +36,7 @@ function MenuLink({ href, children }) {
       }}
     >
       {isHovered && (
-        <Box
-          as="span"
-          animation={`${blinkAnimation} 1.2s infinite`}
-        >
+        <Box as="span" animation={`${blinkAnimation} 1.2s infinite`}>
           {'>'}
         </Box>
       )}

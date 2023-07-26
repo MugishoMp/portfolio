@@ -9,11 +9,12 @@ export function MenuProvider({ children }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const contextValue = useMemo(() => ({ isMenuOpen, toggleMenu }), [isMenuOpen]);
+  const contextValue = useMemo(
+    () => ({ isMenuOpen, toggleMenu }),
+    [isMenuOpen],
+  );
 
   return (
-    <MenuContext.Provider value={contextValue}>
-      {children}
-    </MenuContext.Provider>
+    <MenuContext.Provider value={contextValue}>{children}</MenuContext.Provider>
   );
 }
