@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Linting_Building_Pipeline
 
 on:
   push:
