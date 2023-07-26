@@ -6,7 +6,7 @@
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "prettier": "prettier --write .",
-    "lint": "eslint --fix . && npm run prettier"
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "Mugisho Mpozi<mugishompozi@gmail.com>",
