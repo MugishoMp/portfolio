@@ -1,10 +1,16 @@
+import NextLink from 'next/link';
 import {
   Container,
   Box,
   Heading,
   Image,
   useColorModeValue,
+  Link,
 } from '@chakra-ui/react';
+import Section from '../components/section';
+import Paragraph from '../components/paragraph';
+// indexjs, the first page, homepage, basically the page that the path '/'
+// points to
 
 function Page() {
   return (
@@ -24,7 +30,7 @@ function Page() {
           <Heading as="h2" variant="page-title">
             Mugisho Mpozi
           </Heading>
-          <p> Student (Developer \ Hobbyist \ Audiophile) </p>
+          <p> Student (Student \ In Shambles \ Lost) </p>
         </Box>
         <Box
           flexShrink={0}
@@ -44,6 +50,29 @@ function Page() {
           />
         </Box>
       </Box>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Hello there! I&apos;m Mugisho, A CS student at Leiden University
+          living in The Hague, The Netherlands, with a passion for technology
+          and creativity. Often creating a small tool if i feel like I am
+          missing some functinoality like this
+          {' '}
+          <Link
+            as={NextLink}
+            href="/works/slider"
+          >
+            Slider
+          </Link>
+          {' '}
+          that i made for obsidian. When I&apos;m not coding, you can find me
+          online playing Counter Strike, listening to music or bouldering at a
+          local gym.
+        </Paragraph>
+      </Section>
     </Container>
   );
 }
