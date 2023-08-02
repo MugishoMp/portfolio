@@ -9,4 +9,5 @@ export const BioSection = styled(Box)`
 export const BioYear = styled(Box)`
     font-weight: bold;
     margin-right: 1em;
+    display: inline;
 `;
