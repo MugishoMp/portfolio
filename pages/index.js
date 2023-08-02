@@ -50,59 +50,64 @@ function Page() {
         </Box>
       </Box>
 
-      <Section delay={0.5}>
-        <Heading as="h3" variant="section-title">
-          Occupation
-        </Heading>
-        <Paragraph>
-          Hello there! I&apos;m Mugisho, A CS student at Leiden University
-          living in The Hague, The Netherlands, with a passion for technology
-          and creativity. Often creating a small tool if i feel like I am
-          missing some functinoality like this
-          {' '}
-          <Link
-            as={NextLink}
-            href="/works/slider"
-          >
-            Slider
-          </Link>
-          {' '}
-          that i made for the note taking app obsidian.
-        </Paragraph>
-      </Section>
+      <Box mt={6}>
+        <Section delay={0.5}>
+          <Heading as="h3" variant="section-title">
+            Occupation
+          </Heading>
+          <Paragraph>
+            Hello there! I&apos;m Mugisho, A CS student at Leiden University
+            living in The Hague, The Netherlands, with a passion for technology
+            and creativity. Often creating a small tool if i feel like I am
+            missing some functinoality like this
+            {' '}
+            <Link
+              as={NextLink}
+              href="/works/slider"
+            >
+              Slider
+            </Link>
+            {' '}
+            that i made for the note taking app obsidian.
+          </Paragraph>
+        </Section>
+      </Box>
 
-      <Section delay={1.0}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>2000</BioYear>
-          Born in Bukavu, Democratic Republic of Congo.
-        </BioSection>
-        <BioSection>
-          <BioYear>2016</BioYear>
-          Worked as a food courier for Foodora, Vince Delivery, and Uber Eats.
-        </BioSection>
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Worked at Weconnect, adding and debugging small features and working
-          on graphical user experience of their plaform.
-        </BioSection>
-        <BioSection>
-          <BioYear>2024</BioYear>
-          Expected graduation year.
-        </BioSection>
-      </Section>
-
-      <Section delay={1.5}>
-        <Heading as="h3" variant="section-title">
-          Hobbies
-        </Heading>
-        <Paragraph>
-          When I&apos;m not coding, you can find me online playing Counter
-          Strike 🔫, listening to music 🎵 or bouldering 🧗‍♂️ at a local gym.
-        </Paragraph>
-      </Section>
+      <Box mt={10}>
+        <Section delay={1.0} mt={4}>
+          <Heading as="h3" variant="section-title">
+            Bio
+          </Heading>
+          <BioSection>
+            <BioYear>2000</BioYear>
+            Born in Bukavu, Democratic Republic of Congo.
+          </BioSection>
+          <BioSection>
+            <BioYear>2016</BioYear>
+            Worked as a food courier for Foodora, Vince Delivery, and Uber Eats.
+          </BioSection>
+          <BioSection>
+            <BioYear>2022</BioYear>
+            Worked at Weconnect, adding and debugging small features and working
+            on graphical user experience of their plaform.
+          </BioSection>
+          <BioSection>
+            <BioYear>2024</BioYear>
+            Expected graduation year.
+          </BioSection>
+        </Section>
+      </Box>
+      <Box mt={10}>
+        <Section delay={1.5} mt={4}>
+          <Heading as="h3" variant="section-title">
+            🎮
+          </Heading>
+          <Paragraph>
+            When I&apos;m not coding, you can find me online playing Counter
+            Strike 🔫, listening to music 🎵 or bouldering 🧗‍♂️ at a local gym.
+          </Paragraph>
+        </Section>
+      </Box>
     </Container>
   );
 }
