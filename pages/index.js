@@ -21,7 +21,9 @@ function Page() {
       <Box
         mb={6}
       >
-        <TerminalPrompt />
+        <Section delay={0.3}>
+          <TerminalPrompt />
+        </Section>
       </Box>
 
       <Box display={{ md: 'flex' }}>

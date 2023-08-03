@@ -20,7 +20,8 @@ const LogoBox = styled.span`
 
 function Logo() {
   const mugishoLegoIcon = '/images/logo/mugisho_lego_star_wars_icon_small.png';
-
+  // TODO: when loading the page the font will first be serif before changing
+  //       fix it so that it will immediately load into monospace
   return (
     <Link href="/">
       <LogoBox>
