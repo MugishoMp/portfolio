@@ -1,5 +1,4 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { AnimatePresence } from 'framer-motion';
 import { TerminalContextProvider } from 'react-terminal';
 import Layout from '../components/layouts/main';
 import Fonts from '../components/fonts';
@@ -14,14 +13,12 @@ function Website({ Component, router }) {
         <MenuProvider>
           <Fonts />
           <Layout router={router}>
-            <AnimatePresence mode="wait">
-              <Component
-                // not entirely sure what removing this exactly does so for now im
-                // just going to comment this out
-                // {...pageProps}
-                key={router.route}
-              />
-            </AnimatePresence>
+            <Component
+              // not entirely sure what removing this exactly does so for now im
+              // just going to comment this out
+              // {...pageProps}
+              key={router.route}
+            />
           </Layout>
         </MenuProvider>
       </TerminalContextProvider>

@@ -9,6 +9,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
+import { IoLogoGithub } from 'react-icons/io5';
 // logo
 import Logo from './logo';
 
@@ -76,9 +77,20 @@ function Navbar(props) {
             <LinkItem href="/works" path={path}>
               Works
             </LinkItem>
-            <LinkItem href="/posts" path={path}>
-              Posts
+            <LinkItem
+              target="_blank"
+              href="https://github.com/MugishoMp/portfolio"
+              path={path}
+              display="inline-flex"
+              alignItems="center"
+              pl={2}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <IoLogoGithub />
+                <span>Source</span>
+              </div>
             </LinkItem>
+
           </Stack>
         </Box>
 
