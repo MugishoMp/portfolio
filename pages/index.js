@@ -18,6 +18,7 @@ function Page() {
   return (
     <Container>
       <Box
+        mt={6}
         mb={6}
       >
         <Section delay={0.3}>

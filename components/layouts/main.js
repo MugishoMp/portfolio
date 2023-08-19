@@ -7,6 +7,7 @@ import { MenuContext } from '../../contexts/menuContext';
 import OverlayMenu from '../overlayMenu';
 import Footer from '../footer';
 import Layout from './article';
+import Kirby from '../animated-model';
 
 const PageContainer = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ function Main({ children, router }) {
 
       <MainContent>
         <Container maxW="container.md" pt={14} mb="4rem">
+          <Kirby />
           <Layout title={router.asPath}>
             {children}
           </Layout>
