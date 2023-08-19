@@ -17,19 +17,23 @@ import TerminalPrompt from '../components/terminalPrompt';
 function Page() {
   return (
     <Container>
-
       <Box
+        mt={6}
         mb={6}
       >
-        <TerminalPrompt />
+        <Section delay={0.3}>
+          <TerminalPrompt />
+        </Section>
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Mugisho Mpozi
-          </Heading>
-          <p> Student (Student \ In Shambles \ Lost) </p>
+          <Section delay={0.6}>
+            <Heading as="h2" variant="page-title">
+              Mugisho Mpozi
+            </Heading>
+            <p> Student (Student \ In Shambles \ Lost) </p>
+          </Section>
         </Box>
         <Box
           flexShrink={0}
@@ -37,21 +41,23 @@ function Page() {
           ml={{ md: 6 }}
           align="center"
         >
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={useColorModeValue(0, 1.5)}
-            borderStyle="solid"
-            maxWidth="100px"
-            display="inline-block"
-            borderRadius="full"
-            src="/images/profile/Mugisho_1_Square_Zoomed.jpg"
-            alt="Profile Image"
-          />
+          <Section delay={0.6}>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={useColorModeValue(0, 1.5)}
+              borderStyle="solid"
+              maxWidth="100px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/profile/Mugisho_1_Square_Zoomed.jpg"
+              alt="Profile Image"
+            />
+          </Section>
         </Box>
       </Box>
 
       <Box mt={6}>
-        <Section delay={0.5}>
+        <Section delay={0.9}>
           <Heading as="h3" variant="section-title">
             Occupation
           </Heading>
@@ -74,7 +80,7 @@ function Page() {
       </Box>
 
       <Box mt={10}>
-        <Section delay={1.0} mt={4}>
+        <Section delay={1.2} mt={4}>
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>

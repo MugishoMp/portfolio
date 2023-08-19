@@ -63,7 +63,7 @@ function OverlayMenu({ isOpen, onClose }) {
       <Flex p={4} flexDirection="column" textAlign="center">
         <OverlayMenuLink href="/"> Home </OverlayMenuLink>
         <OverlayMenuLink href="/works"> Works </OverlayMenuLink>
-        <OverlayMenuLink href="/repo"> Repo </OverlayMenuLink>
+        <OverlayMenuLink href="https://github.com/MugishoMp/portfolio"> Repo </OverlayMenuLink>
       </Flex>
     </Box>
   );

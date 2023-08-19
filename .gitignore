@@ -2,6 +2,10 @@
 node_modules/
 .next/
 
+dist
+.vercel
+.env
+
 # Other specific files or directories to ignore (replace with your own)
 file_to_ignore.txt
 directory_to_ignore/
