@@ -64,6 +64,7 @@ function OverlayMenu({ isOpen, onClose }) {
         <OverlayMenuLink href="/"> Home </OverlayMenuLink>
         <OverlayMenuLink href="/works"> Works </OverlayMenuLink>
         <OverlayMenuLink href="https://github.com/MugishoMp/portfolio"> Repo </OverlayMenuLink>
+        <OverlayMenuLink href="https://api.mugishompozi.com/files/pdf/resume/1"> Resume </OverlayMenuLink>
       </Flex>
     </Box>
   );

@@ -90,6 +90,9 @@ function Navbar(props) {
                 <span>Source</span>
               </div>
             </LinkItem>
+            <LinkItem href="https://api.mugishompozi.com/files/pdf/resume/1" path={path}>
+              Resume
+            </LinkItem>
 
           </Stack>
         </Box>
