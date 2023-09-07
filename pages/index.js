@@ -32,7 +32,7 @@ function Page() {
             <Heading as="h2" variant="page-title">
               Mugisho Mpozi
             </Heading>
-            <p> Student (Student \ In Shambles \ Lost) </p>
+            <p> Student (Developer \ Audiophile \ Bike-Head) </p>
           </Section>
         </Box>
         <Box
@@ -62,19 +62,19 @@ function Page() {
             Occupation
           </Heading>
           <Paragraph>
-            Hello there! I&apos;m Mugisho, A CS student at Leiden University
+            Hello there! I&apos;m Mugisho. A CS student at Leiden University
             living in The Hague, The Netherlands, with a passion for technology
-            and creativity. Often creating a small tool if i feel like I am
+            and creativity. I like to create a small tools when if I feel like I am
             missing some functinoality like this
             {' '}
             <Link
               as={NextLink}
-              href="/works/slider"
+              href="/works/obsidianmd"
             >
-              Slider
+              plugin
             </Link>
             {' '}
-            that i made for the note taking app obsidian.
+            that I made for the note taking app Obsidian.
           </Paragraph>
         </Section>
       </Box>
@@ -86,11 +86,11 @@ function Page() {
           </Heading>
           <BioSection>
             <BioYear>2000</BioYear>
-            Born in Bukavu, Democratic Republic of Congo.
+            Born in Bukavu, Democratic Republic of the Congo.
           </BioSection>
           <BioSection>
             <BioYear>2016</BioYear>
-            Worked as a food courier for Foodora, Vince Delivery, and Uber Eats.
+            Worked as a food courier at Foodora, Vince Delivery, and Uber Eats.
           </BioSection>
           <BioSection>
             <BioYear>2022</BioYear>
@@ -110,7 +110,7 @@ function Page() {
           </Heading>
           <Paragraph>
             When I&apos;m not coding, you can find me online playing Counter
-            Strike 🔫, listening to music 🎵 or bouldering 🧗‍♂️ at a local gym.
+            Strike 🔫, listening to music 🎵 or bouldering 🧗‍♂️ at the local gym.
           </Paragraph>
         </Section>
       </Box>

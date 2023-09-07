@@ -27,7 +27,7 @@ function Work() {
       </Title>
       <P>
         An Obsidian plugin that lets you customize the width of the editor by
-        means of a small slider. It has been installed by more than 500
+        means of a small slider. It has been installed by 1000+
         Obsidian users.
       </P>
       <List ml={4} my={4}>
@@ -44,7 +44,7 @@ function Work() {
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>NextJS, Chakra UI, Framer Motion, ThreeJS</span>
+          <span>Typescript, Javascript</span>
         </ListItem>
       </List>
 
