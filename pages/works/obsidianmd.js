@@ -27,7 +27,7 @@ function Work() {
       </Title>
       <P>
         An Obsidian plugin that lets you customize the width of the editor by
-        means of a small slider. It has been installed by 1000+
+        means of a small slider. It has been installed by 3000+
         Obsidian users.
       </P>
       <List ml={4} my={4}>
