@@ -26,9 +26,9 @@ function Work() {
         </Badge>
       </Title>
       <P>
-        A visually immersive grass simulation project that replicates dynamic 
-        grass fields using advanced Worley noise and shader techniques. This 
-        project demonstrates expertise in graphics programming, creating realistic, 
+        A visually immersive grass simulation project that replicates dynamic
+        grass fields using advanced Worley noise and shader techniques. This
+        project demonstrates expertise in graphics programming, creating realistic,
         interactive grassy landscapes.
       </P>
       <List ml={4} my={4}>
@@ -56,4 +56,3 @@ function Work() {
 
 export default Work;
 // export { getServerSideProps } from '../../components/chakra'
-  
