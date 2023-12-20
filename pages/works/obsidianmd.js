@@ -27,7 +27,7 @@ function Work() {
       </Title>
       <P>
         An Obsidian plugin that lets you customize the width of the editor by
-        means of a small slider. It has been installed by 3000+
+        means of a small slider. It has been installed by 5k+
         Obsidian users.
       </P>
       <List ml={4} my={4}>
@@ -48,7 +48,7 @@ function Work() {
         </ListItem>
       </List>
 
-      <WorkImage src="https://github.com/MugishoMp/obsidian-editor-width-slider/blob/master/images/demo-gif-full-size.gif?raw=true" alt="Inkdrop" />
+      <WorkImage src="https://github.com/MugishoMp/obsidian-editor-width-slider/blob/master/images/demo-gif-full-size.gif?raw=true" alt="Obsidian" />
     </Container>
   );
 }

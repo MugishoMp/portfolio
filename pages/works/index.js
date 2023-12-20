@@ -9,6 +9,7 @@ import {
   WorkGridItem,
 } from '../../components/grid-item';
 import thumbObsidian from '../../public/images/works/obsidian-plugin-repo.png';
+import thumbGrass from '../../public/images/works/grass1.png';
 
 function Works() {
   return (
@@ -20,6 +21,9 @@ function Works() {
         <Section>
           <WorkGridItem id="obsidianmd" title="Obsidian Plugin" thumbnail={thumbObsidian}>
             A plugin for Obsidian.
+          </WorkGridItem>
+          <WorkGridItem id="grass" title="Grass simulation" thumbnail={thumbGrass}>
+            Simulation of BOTW style grass.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
